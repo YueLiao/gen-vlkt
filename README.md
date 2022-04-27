@@ -247,7 +247,7 @@ Please consider citing our paper if it helps your research.
 ```
 
 ## License
-GEN-VLKT is released under the MIT license. See [LICENSE]() for additional details.
+GEN-VLKT is released under the MIT license. See [LICENSE](./LICENSE) for additional details.
 
 ## Acknowledge
 Some of the codes are built upon [PPDM](https://github.com/YueLiao/PPDM), [DETR](https://github.com/facebookresearch/detr), [QPIC](https://github.com/hitachi-rd-cv/qpic) and [CDN](https://github.com/YueLiao/CDN). Thanks them for their great works!
