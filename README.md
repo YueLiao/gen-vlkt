@@ -239,7 +239,7 @@ D: Default, KO: Known object, *: The original model is lost and the provided che
 Please consider citing our paper if it helps your research.
 ```
 @inproceedings{liao2022genvlkt,
-  title={Vsgnet: Spatial attention network for detecting human object interactions using graph convolutions},
+  title={GEN-VLKT: Simplify Association and Enhance Interaction Understanding for HOI Detection},
   author={Yue Liao, Aixi Zhang, Miao Lu, Yongliang Wang, Xiaobo Li, Si Liu},
   booktitle={CVPR},
   year={2022}
