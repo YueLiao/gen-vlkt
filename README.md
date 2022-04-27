@@ -212,13 +212,14 @@ python -m torch.distributed.launch \
 ## Regular HOI Detection Results
 
 ### HICO-DET
-| |Full (D)|Rare (D)|Non-rare (D)|Full(KO)|Rare (KO)|Non-rare (KO)|Download| Conifg|
-| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|GEN-VLKT-S (R50)| 33.75| 29.25 |35.10 | 36.78| 32.75| 37.99| [model](https://drive.google.com/file/d/1dcxY41-fBZ1J_Rh_41VolliCwLa7qgk1/view?usp=sharing) | [config](./configs/hico_s.sh)|
-|GEN-VLKT-M (R101)| 34.78| 31.50| 35.77 | 38.07| 34.94| 39.01 | [model]() | [config](./configs/hico_m.sh)|
-|GEN-VLKT-L (R101)| 34.95|  31.18| 36.08 | 38.22| 34.36| 39.37 | [model](https://drive.google.com/file/d/1wTSrpCZujg6kqHbikRrGbUafStggFXjh/view?usp=sharing) |[config](./configs/hico_l.sh) |
+|                    | Full (D) |Rare (D)|Non-rare (D)|Full(KO)|Rare (KO)|Non-rare (KO)|Download| Conifg|
+|:-------------------|:--------:| :---: | :---: | :---: |:-------:|:-----------:| :---: | :---: |
+| GEN-VLKT-S (R50)   |  33.75   | 29.25 |35.10 | 36.78|  32.75  |    37.99    | [model](https://drive.google.com/file/d/1dcxY41-fBZ1J_Rh_41VolliCwLa7qgk1/view?usp=sharing) | [config](./configs/hico_s.sh)|
+| GEN-VLKT-M* (R101) |  34.63   | 30.04|  36.01|  37.97|  33.72  |  39.24 | [model](https://drive.google.com/file/d/1rAS0gEOx2-L3qeprYal4oLgatQgSPtJJ/view?usp=sharing) | [config](./configs/hico_m.sh)|
+| GEN-VLKT-L (R101)  |  34.95   |  31.18| 36.08 | 38.22|  34.36  |    39.37    | [model](https://drive.google.com/file/d/1wTSrpCZujg6kqHbikRrGbUafStggFXjh/view?usp=sharing) |[config](./configs/hico_l.sh) |
 
-D: Default, KO: Known object
+D: Default, KO: Known object, *: The original model is lost and the provided checkpoint performance is slightly different from the paper reported.
+
 
 ### V-COCO
 | | Scenario 1 | Scenario 2 | Download | Config | 
