@@ -79,7 +79,7 @@ python convert_parameters.py \
 ```
 
 ## Training
-After the preparation, you can start training with the following commands. The whole training is split into two steps: CDN base model training and dynamic re-weighting training. The trainings of CDN-S for HICO-DET and V-COCO are shown as follows.
+After the preparation, you can start training with the following commands. The whole training is split into two steps: GEN-VLKT base model training and dynamic re-weighting training. The trainings of GEN-VLKT-S for HICO-DET and V-COCO are shown as follows.
 
 ### HICO-DET
 ```
