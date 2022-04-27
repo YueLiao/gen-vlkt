@@ -102,7 +102,8 @@ python -m torch.distributed.launch \
         --with_clip_label \
         --with_obj_clip_label \
         --with_mimic \
-        --mimic_loss_coef 20
+        --mimic_loss_coef 20 \
+        --ft_clip_with_small_lr
 ```
 
 ### V-COCO
@@ -206,7 +207,8 @@ python -m torch.distributed.launch \
         --with_obj_clip_label \
         --use_nms_filter \
         --zero_shot_type rare_first \
-        --del_unseen
+        --del_unseen \
+        --ft_clip_with_small_lr
 ```
 
 ## Regular HOI Detection Results
@@ -231,9 +233,9 @@ D: Default, KO: Known object, *: The original model is lost and the provided che
 ## Zero-shot HOI Detection Results
 | |Type |Unseen| Seen| Full|Download| Conifg|
 | :--- | :---: | :---: | :---: | :---: | :---: |  :---: |
-| GEN-VLKT-S|RF-UC |21.36 |32.91 |30.56| [model](13:20https://drive.google.com/file/d/1h4NKPNfbH9ixED6X6-4oH5mGkeOJmW0M/view?usp=sharing)|[config](./configs/hico_s_zs_rf_uc.sh)|
+| GEN-VLKT-S|RF-UC |21.36 |32.91 |30.56| [model](https://drive.google.com/file/d/1h4NKPNfbH9ixED6X6-4oH5mGkeOJmW0M/view?usp=sharing)|[config](./configs/hico_s_zs_rf_uc.sh)|
 | GEN-VLKT-S|NF-UC |25.05| 23.38| 23.71| [model](https://drive.google.com/file/d/1J1UdauMnzc1cM-OOqMrwXpnJwBGj5pe6/view?usp=sharing)|[config](./configs/hico_s_zs_nf_uc.sh)|
-| GEN-VLKT-S|UO |10.51| 28.92| 25.63| [model](13:21https://drive.google.com/file/d/19nEAr1IIeTryYFeVA6SY1pmmEpvw3eUD/view?usp=sharing)|[config](./configs/hico_s_zs_uo.sh)|
+| GEN-VLKT-S|UO |10.51| 28.92| 25.63| [model](https://drive.google.com/file/d/19nEAr1IIeTryYFeVA6SY1pmmEpvw3eUD/view?usp=sharing)|[config](./configs/hico_s_zs_uo.sh)|
 | GEN-VLKT-S|UV|20.96| 30.23| 28.74| [model](https://drive.google.com/file/d/1lJbsoIgeluYFcBC_pnx5FdT3fOUpMwQl/view?usp=sharing)|[config](./configs/hico_s_zs_uv.sh)|
 ## Citation
 Please consider citing our paper if it helps your research.
