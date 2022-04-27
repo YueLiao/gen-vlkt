@@ -207,8 +207,7 @@ python -m torch.distributed.launch \
         --with_obj_clip_label \
         --use_nms_filter \
         --zero_shot_type rare_first \
-        --del_unseen \
-        --ft_clip_with_small_lr
+        --del_unseen
 ```
 
 ## Regular HOI Detection Results
