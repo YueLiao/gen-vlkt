@@ -7,7 +7,7 @@ python -m torch.distributed.launch \
         --nproc_per_node=8 \
         --use_env \
         main.py \
-        --pretrained params/detr-r50-pre-2branch-q64.pth \
+        --pretrained params/detr-r50-pre-2branch-vcoco.pth \
         --output_dir ${EXP_DIR} \
         --dataset_file vcoco \
         --hoi_path data/v-coco \

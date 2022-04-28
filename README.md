@@ -69,12 +69,12 @@ Download the pretrained model of DETR detector for [ResNet50](https://dl.fbaipub
 ```
 python ./tools/convert_parameters.py \
         --load_path params/detr-r50-e632da11.pth \
-        --save_path params/detr-r50-pre-2branch-q64.pth \
+        --save_path params/detr-r50-pre-2branch-hico.pth \
         --num_queries 64
 
 python ./tools/convert_parameters.py \
         --load_path params/detr-r50-e632da11.pth \
-        --save_path params/detr-r50-pre-2branch.pth \
+        --save_path params/detr-r50-pre-2branch-vcoco.pth \
         --dataset vcoco \
         --num_queries 64
 ```

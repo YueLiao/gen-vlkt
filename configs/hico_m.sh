@@ -7,7 +7,7 @@ python -m torch.distributed.launch \
         --nproc_per_node=8 \
         --use_env \
         main.py \
-        --pretrained params/detr-r101-pre-2branch-q64.pth \
+        --pretrained params/detr-r101-pre-2branch-hico.pth \
         --output_dir ${EXP_DIR} \
         --dataset_file hico \
         --hoi_path data/hico_20160224_det \
