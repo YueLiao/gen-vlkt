@@ -14,7 +14,7 @@ python -m torch.distributed.launch \
         --num_obj_classes 81 \
         --num_verb_classes 29 \
         --backbone resnet101 \
-        --num_queries 100 \
+        --num_queries 64 \
         --dec_layers 3 \
         --epochs 90 \
         --lr_drop 60 \

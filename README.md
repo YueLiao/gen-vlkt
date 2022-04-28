@@ -67,15 +67,16 @@ V-COCO annotations with the HOIA format, `corre_vcoco.npy`, `test_vcoco.json`, a
 ## Pre-trained model
 Download the pretrained model of DETR detector for [ResNet50](https://dl.fbaipublicfiles.com/detr/detr-r50-e632da11.pth), and put it to the `params` directory.
 ```
-python convert_parameters.py \
+python ./tools/convert_parameters.py \
         --load_path params/detr-r50-e632da11.pth \
         --save_path params/detr-r50-pre-2branch-q64.pth \
         --num_queries 64
 
-python convert_parameters.py \
+python ./tools/convert_parameters.py \
         --load_path params/detr-r50-e632da11.pth \
         --save_path params/detr-r50-pre-2branch.pth \
-        --dataset vcoco
+        --dataset vcoco \
+        --num_queries 64
 ```
 
 ## Training
@@ -119,7 +120,7 @@ python -m torch.distributed.launch \
         --num_obj_classes 81 \
         --num_verb_classes 29 \
         --backbone resnet50 \
-        --num_queries 100 \
+        --num_queries 64 \
         --dec_layers 3 \
         --epochs 90 \
         --lr_drop 60 \
@@ -154,7 +155,7 @@ python -m torch.distributed.launch \
         --use_nms_filter
 ```
 
-For the official evalution (reported in paper), you need to covert the prediction file to a official prediction format following [this file](./tools/covert_annot_for_official_eval.py), and then follow [PPDM](https://github.com/YueLiao/PPDM) evaluation steps.
+For the official evaluation (reported in paper), you need to covert the prediction file to a official prediction format following [this file](./tools/covert_annot_for_official_eval.py), and then follow [PPDM](https://github.com/YueLiao/PPDM) evaluation steps.
 ### V-COCO
 Firstly, you need the add the following main function to the vsrl_eval.py in data/v-coco.
 ```
