@@ -84,52 +84,16 @@ After the preparation, you can start training with the following commands. The w
 
 ### HICO-DET
 ```
-python -m torch.distributed.launch \
-        --nproc_per_node=8 \
-        --use_env \
-        main.py \
-        --pretrained params/detr-r50-pre-2stage-q64.pth \
-        --output_dir logs \
-        --dataset_file hico \
-        --hoi_path data/hico_20160224_det \
-        --num_obj_classes 80 \
-        --num_verb_classes 117 \
-        --backbone resnet50 \
-        --num_queries 64 \
-        --dec_layers 3 \
-        --epochs 90 \
-        --lr_drop 60 \
-        --use_nms_filter \
-        --with_clip_label \
-        --with_obj_clip_label \
-        --with_mimic \
-        --mimic_loss_coef 20 \
-        --ft_clip_with_small_lr
+sh ./config/hico_s.sh
 ```
 
 ### V-COCO
 ```
-python -m torch.distributed.launch \
-        --nproc_per_node=8 \
-        --use_env \
-        main.py \
-        --pretrained params/detr-r50-pre-2branch.pth \
-        --output_dir logs \
-        --dataset_file vcoco \
-        --hoi_path data/v-coco \
-        --num_obj_classes 81 \
-        --num_verb_classes 29 \
-        --backbone resnet50 \
-        --num_queries 64 \
-        --dec_layers 3 \
-        --epochs 90 \
-        --lr_drop 60 \
-        --use_nms_filter \
-        --with_clip_label \
-        --with_obj_clip_label \
-        --with_mimic \
-        --mimic_loss_coef 20 \
-        --ft_clip_with_small_lr
+sh ./configs/vcoco_s.sh
+```
+### Zero-shot
+```
+sh ./configs/hico_s_zs_nf_uc.sh
 ```
 
 ## Evaluation
