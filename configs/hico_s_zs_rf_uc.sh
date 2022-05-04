@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 set -x
-EXP_DIR=exps/hico_gen_vlkt_s_r50_dec_3layers_zero_shot_uo
+EXP_DIR=exps/hico_gen_vlkt_s_r50_dec_3layers_zero_shot_rf_uc
 
 python -m torch.distributed.launch \
         --nproc_per_node=8 \

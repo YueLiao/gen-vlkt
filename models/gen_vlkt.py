@@ -143,7 +143,8 @@ class GEN_VLKT(nn.Module):
             inter_hs = self.hoi_class_fc(inter_hs)
             outputs_inter_hs = inter_hs.clone()
             inter_hs = inter_hs / inter_hs.norm(dim=-1, keepdim=True)
-            if self.args.dataset_file == 'hico' and self.args.zero_shot_type != 'default' and self.args.eval:
+            if self.args.dataset_file == 'hico' and self.args.zero_shot_type != 'default' \
+                    and (self.args.eval or not is_training):
                 outputs_hoi_class = logit_scale * self.eval_visual_projection(inter_hs)
             else:
                 outputs_hoi_class = logit_scale * self.visual_projection(inter_hs)
