@@ -204,10 +204,10 @@ D: Default, KO: Known object, *: The original model is lost and the provided che
 ## Citation
 Please consider citing our paper if it helps your research.
 ```
-@inproceedings{liao2022genvlkt,
+@article{liao2022gen,
   title={GEN-VLKT: Simplify Association and Enhance Interaction Understanding for HOI Detection},
-  author={Yue Liao, Aixi Zhang, Miao Lu, Yongliang Wang, Xiaobo Li, Si Liu},
-  booktitle={CVPR},
+  author={Liao, Yue and Zhang, Aixi and Lu, Miao and Wang, Yongliang and Li, Xiaobo and Liu, Si},
+  journal={arXiv preprint arXiv:2203.13954},
   year={2022}
 }
 ```
