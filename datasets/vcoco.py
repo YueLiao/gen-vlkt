@@ -14,7 +14,7 @@ from .vcoco_text_label import *
 
 class VCOCO(torch.utils.data.Dataset):
 
-    def __init__(self, img_set, img_folder, anno_file, transforms, num_queries):
+    def __init__(self, img_set, img_folder, anno_file, transforms, num_queries, args):
         self.img_set = img_set
         self.img_folder = img_folder
         with open(anno_file, 'r') as f:
@@ -210,7 +210,7 @@ def build(image_set, args):
 
     img_folder, anno_file = PATHS[image_set]
     dataset = VCOCO(image_set, img_folder, anno_file, transforms=make_vcoco_transforms(image_set),
-                    num_queries=args.num_queries)
+                    num_queries=args.num_queries, args=args)
     if image_set == 'val':
         dataset.load_correct_mat(CORRECT_MAT_PATH)
     return dataset
