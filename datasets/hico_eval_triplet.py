@@ -139,6 +139,8 @@ class HICOEvaluator():
         max_recall = defaultdict(lambda: 0)
         for triplet in self.gt_triplets:
             sum_gts = self.sum_gts[triplet]
+            orignal_triplet = self.hico_triplet_labels[triplet]
+            orignal_triplet = (0, orignal_triplet[1], orignal_triplet[0])
             if sum_gts == 0:
                 continue
 
@@ -147,9 +149,9 @@ class HICOEvaluator():
             if len(tp) == 0:
                 ap[triplet] = 0
                 max_recall[triplet] = 0
-                if triplet in self.rare_triplets:
+                if orignal_triplet in self.rare_triplets:
                     rare_ap[triplet] = 0
-                elif triplet in self.non_rare_triplets:
+                elif orignal_triplet in self.non_rare_triplets:
                     non_rare_ap[triplet] = 0
                 else:
                     print('Warning: triplet {} is neither in rare triplets nor in non-rare triplets'.format(triplet))
@@ -166,8 +168,6 @@ class HICOEvaluator():
             # ap[triplet] = self.cal_prec(rec, prec)
             ap[triplet] = self.voc_ap(rec, prec)
             max_recall[triplet] = np.amax(rec)
-            orignal_triplet = self.hico_triplet_labels[triplet]
-            orignal_triplet = (0, orignal_triplet[1], orignal_triplet[0])
             if orignal_triplet in self.rare_triplets:
                 rare_ap[triplet] = ap[triplet]
             elif orignal_triplet in self.non_rare_triplets:
